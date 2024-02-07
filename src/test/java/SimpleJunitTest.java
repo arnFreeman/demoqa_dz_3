@@ -51,5 +51,5 @@ public class SimpleJunitTest {
     static void afterAll() {
         System.out.println("#   afterAll\n");
     }
-
+// -------> DaNuNa <-------
 }
