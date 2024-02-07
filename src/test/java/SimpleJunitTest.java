@@ -2,6 +2,8 @@ import org.junit.jupiter.api.*;
 
 public class SimpleJunitTest {
 
+   // -------> DaNuNa <-------
+
     int result;
     @BeforeAll
     static void beforeAll() {
@@ -49,4 +51,5 @@ public class SimpleJunitTest {
     static void afterAll() {
         System.out.println("#   afterAll\n");
     }
+
 }
