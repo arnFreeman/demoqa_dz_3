@@ -29,7 +29,7 @@ public class PracticeFormTests {
         $(".react-datepicker__month").$(byText("28")).click();
         $("#subjectsInput").setValue("Commerce").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
-        $("#uploadPicture").uploadFromClasspath("1221.jpg");
+        $("#uploadPicture").uploadFromClasspath("1223.jpg");
         $("#currentAddress").setValue("Baikonur Cosmodrome");
         $("#state").click();
         $("#state").$(byText("Uttar Pradesh")).click();
@@ -44,7 +44,7 @@ public class PracticeFormTests {
                 text("28 April,1900"),
                 text("Commerce"),
                 text("Reading"),
-                text("1221.jpg"),
+                text("1223.jpg"),
                 text("Baikonur Cosmodrome"),
                 text("Uttar Pradesh Lucknow"));
 
