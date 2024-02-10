@@ -17,9 +17,6 @@ public class PracticeFormTests {
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
-
 
         $("#firstName").setValue("Renat");
         $("#lastName").setValue("Taner");
