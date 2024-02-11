@@ -13,10 +13,11 @@ public class PracticeFormTests {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
     }
-
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
 
         $("#firstName").setValue("Renat");
         $("#lastName").setValue("Taner");
@@ -37,16 +38,16 @@ public class PracticeFormTests {
         $("#city").$(byText("Lucknow")).click();
         $("#submit").click();
 
-        $(".modal-body").shouldHave(text("Renat Taner"),
-                text("renat@taner.com"),
-                text("Other"),
-                text("9876543210"),
-                text("28 April,1900"),
-                text("Commerce"),
-                text("Reading"),
-                text("1223.jpg"),
-                text("Baikonur Cosmodrome"),
-                text("Uttar Pradesh Lucknow"));
-
-    }
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".table-responsive").shouldHave(text("Renat Taner"));
+        $(".table-responsive").shouldHave(text("renat@taner.com"));
+        $(".table-responsive").shouldHave(text("Other"));
+        $(".table-responsive").shouldHave(text("9876543210"));
+        $(".table-responsive").shouldHave(text("28 April,1900"));
+        $(".table-responsive").shouldHave(text("Commerce"));
+        $(".table-responsive").shouldHave(text("Reading"));
+        $(".table-responsive").shouldHave(text("1223.jpg"));
+        $(".table-responsive").shouldHave(text("Baikonur Cosmodrome"));
+        $(".table-responsive").shouldHave(text("Uttar Pradesh Lucknow"));
+         }
 }
