@@ -18,6 +18,7 @@ public class PracticeFormTests {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
+        $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
 
         $("#firstName").setValue("Renat");
         $("#lastName").setValue("Taner");
@@ -49,5 +50,5 @@ public class PracticeFormTests {
         $(".table-responsive").shouldHave(text("1223.jpg"));
         $(".table-responsive").shouldHave(text("Baikonur Cosmodrome"));
         $(".table-responsive").shouldHave(text("Uttar Pradesh Lucknow"));
-         }
+    }
 }
